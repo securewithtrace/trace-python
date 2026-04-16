@@ -98,13 +98,4 @@ except WebhookParseError:
 
 ## Contributing
 
-```sh
-# Install dependencies
-uv sync
-
-# Run the full check suite
-uv run ruff format --check .
-uv run ruff check .
-uv run mypy --strict .
-uv run pytest
-```
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and guidelines.
