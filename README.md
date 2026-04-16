@@ -1,7 +1,6 @@
 # Trace Python SDK
 
 [![pypi](https://img.shields.io/pypi/v/securewithtrace)](https://pypi.org/project/securewithtrace)
-[![CI](https://github.com/securewithtrace/trace-python/actions/workflows/ci.yml/badge.svg)](https://github.com/securewithtrace/trace-python/actions/workflows/ci.yml)
 
 The Trace Python SDK provides convenient access to webhook event parsing and signature verification for the [Trace](https://securewithtrace.com) security platform.
 
