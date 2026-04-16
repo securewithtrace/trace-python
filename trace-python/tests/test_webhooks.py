@@ -14,7 +14,7 @@ from trace.webhooks import (
     WebhookParseError,
     WebhookVerificationError,
 )
-from typing import Callable, TypeAlias
+from typing import Protocol, TypeAlias
 
 import pytest
 
@@ -29,13 +29,17 @@ EventClass: TypeAlias = type[
 ]
 
 
+class Signer(Protocol):
+    def __call__(self, payload: bytes, secret: str = WEBHOOK_SECRET) -> str: ...
+
+
 def sign_payload(payload: bytes, secret: str = WEBHOOK_SECRET) -> str:
     digest = hmac.new(secret.encode(), payload, hashlib.sha256).hexdigest()
     return f"sha256={digest}"
 
 
 @pytest.fixture
-def signer() -> Callable[[bytes, str], str]:
+def signer() -> Signer:
     def _signer(payload: bytes, secret: str = WEBHOOK_SECRET) -> str:
         return sign_payload(payload=payload, secret=secret)
 
@@ -52,7 +56,7 @@ def make_envelope(data: dict[str, object]) -> dict[str, object]:
     }
 
 
-def test_valid_signature_passes_verification(signer: Callable[[bytes, str], str]) -> None:
+def test_valid_signature_passes_verification(signer: Signer) -> None:
     payload = b'{"hello":"trace"}'
     handler = WebhookHandler(secret=WEBHOOK_SECRET)
     signature = signer(payload)
@@ -60,7 +64,7 @@ def test_valid_signature_passes_verification(signer: Callable[[bytes, str], str]
     assert handler.verify_signature(payload=payload, signature=signature)
 
 
-def test_tampered_payload_raises_verification_error(signer: Callable[[bytes, str], str]) -> None:
+def test_tampered_payload_raises_verification_error(signer: Signer) -> None:
     original_payload = b'{"id":"evt_1"}'
     tampered_payload = b'{"id":"evt_2"}'
     handler = WebhookHandler(secret=WEBHOOK_SECRET)
@@ -74,7 +78,7 @@ def test_tampered_payload_raises_verification_error(signer: Callable[[bytes, str
         )
 
 
-def test_wrong_secret_raises_verification_error(signer: Callable[[bytes, str], str]) -> None:
+def test_wrong_secret_raises_verification_error(signer: Signer) -> None:
     payload = b'{"id":"evt_1"}'
     handler = WebhookHandler(secret="whsec_wrong_secret")
     signature = signer(payload, WEBHOOK_SECRET)
@@ -158,7 +162,7 @@ def test_event_types_parse_into_dataclasses(
     event_type: str,
     payload_data: dict[str, object],
     event_class: EventClass,
-    signer: Callable[[bytes, str], str],
+    signer: Signer,
 ) -> None:
     envelope = make_envelope(payload_data)
     envelope["type"] = event_type
@@ -174,7 +178,7 @@ def test_event_types_parse_into_dataclasses(
     assert event.organization_id == "org_123"
 
 
-def test_unknown_event_type_raises_parse_error(signer: Callable[[bytes, str], str]) -> None:
+def test_unknown_event_type_raises_parse_error(signer: Signer) -> None:
     envelope = make_envelope(
         {
             "vulnerability_id": "vuln_1",
