@@ -4,7 +4,11 @@ import hashlib
 import hmac
 import json
 from datetime import datetime
-from trace.webhooks import (
+from typing import Protocol, TypeAlias
+
+import pytest
+
+from trace_python.webhooks import (
     VulnerabilityDetectedEvent,
     VulnerabilityFixedEvent,
     VulnerabilityReopenedEvent,
@@ -14,9 +18,6 @@ from trace.webhooks import (
     WebhookParseError,
     WebhookVerificationError,
 )
-from typing import Protocol, TypeAlias
-
-import pytest
 
 WEBHOOK_SECRET = "whsec_test_secret"
 EVENT_TYPE = "vulnerability.detected"

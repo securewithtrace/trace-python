@@ -1,7 +1,6 @@
 from __future__ import annotations
 
-from trace.api import TraceClient
-from trace.webhooks import (
+from trace_python.webhooks import (
     TraceEvent,
     WebhookHandler,
     WebhookParseError,
@@ -9,7 +8,6 @@ from trace.webhooks import (
 )
 
 __all__ = [
-    "TraceClient",
     "TraceEvent",
     "WebhookHandler",
     "WebhookParseError",

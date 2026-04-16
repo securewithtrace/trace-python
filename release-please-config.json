@@ -1,8 +1,8 @@
 {
   "packages": {
-    "trace-python": {
+    ".": {
       "release-type": "python",
-      "package-name": "trace",
+      "package-name": "trace-python",
       "extra-files": [
         "pyproject.toml"
       ]

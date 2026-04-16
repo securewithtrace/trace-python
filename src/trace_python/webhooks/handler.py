@@ -4,8 +4,9 @@ import hashlib
 import hmac
 import json
 from dataclasses import dataclass
-from trace.webhooks.events import TraceEvent, parse_event
-from trace.webhooks.exceptions import WebhookParseError, WebhookVerificationError
+
+from trace_python.webhooks.events import TraceEvent, parse_event
+from trace_python.webhooks.exceptions import WebhookParseError, WebhookVerificationError
 
 
 @dataclass(frozen=True)
