@@ -78,15 +78,13 @@ is_valid = handler.verify_signature(
 
 The SDK provides typed dataclasses for all webhook event types:
 
-| Event Type | Class | Data Class |
-|---|---|---|
-| `vulnerability.detected` | `VulnerabilityDetectedEvent` | `VulnerabilityDetectedData` |
-| `vulnerability.fixed` | `VulnerabilityFixedEvent` | `VulnerabilityFixedData` |
-| `vulnerability.reopened` | `VulnerabilityReopenedEvent` | `VulnerabilityReopenedData` |
-| `vulnerability.status_updated` | `VulnerabilityStatusUpdatedEvent` | `VulnerabilityStatusUpdatedData` |
-| `vulnerability.severity_changed` | `VulnerabilitySeverityChangedEvent` | `VulnerabilitySeverityChangedData` |
-
-All event classes are frozen dataclasses with full type annotations and `py.typed` marker for type checker support.
+| Event Type | Class |
+|---|---|
+| `vulnerability.detected` | `VulnerabilityDetectedEvent` |
+| `vulnerability.fixed` | `VulnerabilityFixedEvent` |
+| `vulnerability.reopened` | `VulnerabilityReopenedEvent` |
+| `vulnerability.status_updated` | `VulnerabilityStatusUpdatedEvent` |
+| `vulnerability.severity_changed` | `VulnerabilitySeverityChangedEvent` |
 
 ### Exception Handling
 
