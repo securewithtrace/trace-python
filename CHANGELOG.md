@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/securewithtrace/trace-python/compare/securewithtrace-v0.3.0...securewithtrace-v0.3.1) (2026-04-16)
+
+
+### Bug Fixes
+
+* correct PyPI package name to securewithtrace in pyproject.toml ([c396ede](https://github.com/securewithtrace/trace-python/commit/c396eded76ba59bccbe25e4400057f03e2c5f6e6))
+
 ## [0.3.0](https://github.com/securewithtrace/trace-python/compare/securewithtrace-v0.2.0...securewithtrace-v0.3.0) (2026-04-16)
 
 
