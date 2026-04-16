@@ -1,0 +1,9 @@
+# Changelog
+
+## [0.2.0](https://github.com/securewithtrace/trace-python/compare/securewithtrace-v0.1.0...securewithtrace-v0.2.0) (2026-04-16)
+
+
+### Features
+
+* initial Trace Python SDK with webhook verification ([#2](https://github.com/securewithtrace/trace-python/issues/2)) ([5316429](https://github.com/securewithtrace/trace-python/commit/5316429a8cad3a7610231c47732619dee623ecb1))
+* rename package to securewithtrace ([#5](https://github.com/securewithtrace/trace-python/issues/5)) ([b1a6ff7](https://github.com/securewithtrace/trace-python/commit/b1a6ff7d379a7b93697225f6415a5facea196a97))
