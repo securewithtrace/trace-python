@@ -8,7 +8,14 @@ The Trace Python SDK provides convenient access to webhook event parsing and sig
 ## Installation
 
 ```sh
+# pip
 pip install trace-python
+
+# uv
+uv add trace-python
+
+# poetry
+poetry add trace-python
 ```
 
 ## Requirements
