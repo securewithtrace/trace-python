@@ -26,6 +26,7 @@ Python 3.12+
 ### Webhook Verification
 
 Verify and parse incoming webhook events from Trace. The SDK validates HMAC-SHA256 signatures and parses the payload into strongly-typed dataclasses.
+For Python webhook signature verification, use the [Trace Python SDK](https://github.com/securewithtrace/trace-python). If you need support for additional languages, please reach out to us.
 
 ```python
 from securewithtrace import WebhookHandler, WebhookVerificationError, WebhookParseError
