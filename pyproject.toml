@@ -30,10 +30,10 @@ select = [
 ]
 
 [tool.ruff.lint.isort]
-known-first-party = ["tracepy"]
+known-first-party = ["securewithtrace"]
 
 [tool.pytest.ini_options]
-addopts = "--cov=tracepy --cov-report=term-missing --import-mode=importlib"
+addopts = "--cov=securewithtrace --cov-report=term-missing --import-mode=importlib"
 testpaths = ["tests"]
 
 [tool.mypy]
@@ -43,7 +43,7 @@ warn_unused_configs = true
 show_error_codes = true
 pretty = true
 mypy_path = "src"
-packages = ["tracepy"]
+packages = ["securewithtrace"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/tracepy"]
+packages = ["src/securewithtrace"]
