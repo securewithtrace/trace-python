@@ -308,7 +308,7 @@ wheels = [
 ]
 
 [[package]]
-name = "trace-python"
+name = "trace"
 version = "0.1.0"
 source = { editable = "." }
 

@@ -2,7 +2,7 @@
   "packages": {
     ".": {
       "release-type": "python",
-      "package-name": "trace-python",
+      "package-name": "trace",
       "prerelease": true,
       "prerelease-type": "alpha",
       "extra-files": [

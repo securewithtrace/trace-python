@@ -5,8 +5,8 @@ import hmac
 import json
 from dataclasses import dataclass
 
-from trace_python.webhooks.events import TraceEvent, parse_event
-from trace_python.webhooks.exceptions import WebhookParseError, WebhookVerificationError
+from tracepy.webhooks.events import TraceEvent, parse_event
+from tracepy.webhooks.exceptions import WebhookParseError, WebhookVerificationError
 
 
 @dataclass(frozen=True)

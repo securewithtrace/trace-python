@@ -20,7 +20,7 @@ uv sync
 ### Project structure
 
 ```
-src/trace_python/        # Package source (src layout)
+src/tracepy/        # Package source (src layout)
   webhooks/              # Webhook verification and event parsing
 tests/                   # Test suite
 ```

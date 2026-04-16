@@ -5,7 +5,7 @@ from datetime import datetime
 from enum import Enum
 from typing import Any, Literal, Mapping, TypeAlias, TypeVar, cast
 
-from trace_python.webhooks.exceptions import WebhookParseError
+from tracepy.webhooks.exceptions import WebhookParseError
 
 
 class Severity(str, Enum):

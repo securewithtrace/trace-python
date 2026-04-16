@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "trace-python"
+name = "trace"
 version = "0.1.0"
 description = "Python SDK for the Trace security platform"
 readme = "README.md"
@@ -29,8 +29,11 @@ select = [
     "I",
 ]
 
+[tool.ruff.lint.isort]
+known-first-party = ["tracepy"]
+
 [tool.pytest.ini_options]
-addopts = "--cov=trace_python --cov-report=term-missing --import-mode=importlib"
+addopts = "--cov=tracepy --cov-report=term-missing --import-mode=importlib"
 testpaths = ["tests"]
 
 [tool.mypy]
@@ -40,7 +43,7 @@ warn_unused_configs = true
 show_error_codes = true
 pretty = true
 mypy_path = "src"
-packages = ["trace_python"]
+packages = ["tracepy"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/trace_python"]
+packages = ["src/tracepy"]

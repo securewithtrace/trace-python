@@ -8,7 +8,7 @@ from typing import Protocol, TypeAlias
 
 import pytest
 
-from trace_python.webhooks import (
+from tracepy.webhooks import (
     VulnerabilityDetectedEvent,
     VulnerabilityFixedEvent,
     VulnerabilityReopenedEvent,
