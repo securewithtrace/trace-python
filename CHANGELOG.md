@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.4](https://github.com/securewithtrace/trace-python/compare/securewithtrace-v0.3.3...securewithtrace-v0.3.4) (2026-04-16)
+
+
+### Bug Fixes
+
+* bust shields.io cache for PyPI badge ([#16](https://github.com/securewithtrace/trace-python/issues/16)) ([58781f1](https://github.com/securewithtrace/trace-python/commit/58781f114a78613744eba8dddaaef9746a044c0d))
+
 ## [0.3.3](https://github.com/securewithtrace/trace-python/compare/securewithtrace-v0.3.2...securewithtrace-v0.3.3) (2026-04-16)
 
 
