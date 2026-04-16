@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/securewithtrace/trace-python/compare/securewithtrace-v0.3.1...securewithtrace-v0.3.2) (2026-04-16)
+
+
+### Bug Fixes
+
+* regenerate uv.lock for securewithtrace package name ([#11](https://github.com/securewithtrace/trace-python/issues/11)) ([db58b3c](https://github.com/securewithtrace/trace-python/commit/db58b3cf94c5b2577ddd17bc3d82bc3148423869))
+
 ## [0.3.1](https://github.com/securewithtrace/trace-python/compare/securewithtrace-v0.3.0...securewithtrace-v0.3.1) (2026-04-16)
 
 
