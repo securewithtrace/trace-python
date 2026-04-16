@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from tracepy.webhooks.events import (
+from securewithtrace.webhooks.events import (
     ScannerType,
     Severity,
     TraceEvent,
@@ -18,8 +18,8 @@ from tracepy.webhooks.events import (
     VulnerabilityStatusUpdatedEvent,
     parse_event,
 )
-from tracepy.webhooks.exceptions import WebhookParseError, WebhookVerificationError
-from tracepy.webhooks.handler import WebhookHandler
+from securewithtrace.webhooks.exceptions import WebhookParseError, WebhookVerificationError
+from securewithtrace.webhooks.handler import WebhookHandler
 
 __all__ = [
     "ScannerType",

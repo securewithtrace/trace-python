@@ -1,6 +1,6 @@
 # Trace Python SDK
 
-[![pypi](https://img.shields.io/pypi/v/trace)](https://pypi.org/project/trace)
+[![pypi](https://img.shields.io/pypi/v/securewithtrace)](https://pypi.org/project/securewithtrace)
 [![CI](https://github.com/securewithtrace/trace-python/actions/workflows/ci.yml/badge.svg)](https://github.com/securewithtrace/trace-python/actions/workflows/ci.yml)
 
 The Trace Python SDK provides convenient access to webhook event parsing and signature verification for the [Trace](https://securewithtrace.com) security platform.
@@ -9,13 +9,13 @@ The Trace Python SDK provides convenient access to webhook event parsing and sig
 
 ```sh
 # pip
-pip install trace
+pip install securewithtrace
 
 # uv
-uv add trace
+uv add securewithtrace
 
 # poetry
-poetry add trace
+poetry add securewithtrace
 ```
 
 ## Requirements
@@ -29,7 +29,7 @@ Python 3.12+
 Verify and parse incoming webhook events from Trace. The SDK validates HMAC-SHA256 signatures and parses the payload into strongly-typed dataclasses.
 
 ```python
-from tracepy import WebhookHandler, WebhookVerificationError, WebhookParseError
+from securewithtrace import WebhookHandler, WebhookVerificationError, WebhookParseError
 
 handler = WebhookHandler(secret="whsec_your_webhook_secret")
 
@@ -89,7 +89,7 @@ The SDK provides typed dataclasses for all webhook event types:
 ### Exception Handling
 
 ```python
-from tracepy import WebhookVerificationError, WebhookParseError
+from securewithtrace import WebhookVerificationError, WebhookParseError
 
 try:
     event = handler.verify_and_parse(payload, signature, event_type)

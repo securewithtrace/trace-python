@@ -6,8 +6,8 @@ import json
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 
-from tracepy.webhooks.events import TraceEvent, parse_event
-from tracepy.webhooks.exceptions import WebhookParseError, WebhookVerificationError
+from securewithtrace.webhooks.events import TraceEvent, parse_event
+from securewithtrace.webhooks.exceptions import WebhookParseError, WebhookVerificationError
 
 _DEFAULT_TOLERANCE = timedelta(minutes=5)
 

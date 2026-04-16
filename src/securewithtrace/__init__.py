@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from tracepy.webhooks import (
+from securewithtrace.webhooks import (
     TraceEvent,
     WebhookHandler,
     WebhookParseError,
