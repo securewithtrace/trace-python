@@ -2,7 +2,7 @@
   "packages": {
     ".": {
       "release-type": "python",
-      "package-name": "trace",
+      "package-name": "tracepy",
       "prerelease": true,
       "prerelease-type": "alpha",
       "extra-files": [
