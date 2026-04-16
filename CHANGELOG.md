@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/securewithtrace/trace-python/compare/securewithtrace-v0.3.2...securewithtrace-v0.3.3) (2026-04-16)
+
+
+### Bug Fixes
+
+* install project Python before lockfile check in CI ([#13](https://github.com/securewithtrace/trace-python/issues/13)) ([ef692fd](https://github.com/securewithtrace/trace-python/commit/ef692fd531bea4f3fb66ed8195dd54dfa6b8e62b))
+
 ## [0.3.2](https://github.com/securewithtrace/trace-python/compare/securewithtrace-v0.3.1...securewithtrace-v0.3.2) (2026-04-16)
 
 
